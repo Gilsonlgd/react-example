@@ -1,12 +1,16 @@
 import './{{ pascal.viewName }}.scoped.css';
 
+/* import { BaseButton } from '@/components' */
+
 function {{ pascal.viewName }}(): JSX.Element {
   return (
-    <div className="container-fluid p-2 px-4">
-      <div className="row">
-        {/* Your code here */}
+    <div className="container-fluid p-2 px-4 h-100">
+      <div className="d-flex row h-100 align-items-center">
+        <h1 className="text-muted fw-bold text-center">
+          Conteúdo de {{ kebab.viewName }}
+        </h1>
       </div>
-    </div> 
+    </div>
   );
 }
 

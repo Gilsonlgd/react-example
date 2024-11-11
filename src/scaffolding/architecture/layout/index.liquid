@@ -1,4 +1,4 @@
-import './{{ pascal.roleName }}Layout.scoped.css';
+import './{{ pascal.layoutName }}Layout.scoped.css';
 import { Outlet } from 'react-router-dom';
 
 /*
@@ -6,7 +6,7 @@ import { Outlet } from 'react-router-dom';
  * import Footer from "./components/Footer/Footer";
  */
 
-function {{ pascal.roleName }}Layout(): JSX.Element {
+function {{ pascal.layoutName }}Layout(): JSX.Element {
   return (
     <div {% raw %}style={{ height: '100%' }}{% endraw %}>
       {/* <NavBar /> */}
@@ -18,4 +18,11 @@ function {{ pascal.roleName }}Layout(): JSX.Element {
   );
 }
 
-export default {{ pascal.roleName }}Layout;
+export default {{ pascal.layoutName }}Layout;
+
+/**
+ * @note
+ * Note que no caso de uma arquitetura com diferentes níveis de usuário,
+ * deve-se inserir o novo layout dentro de um diretório que leva o nome do nível.
+ * Exemplo: PublicLayout == src/layout/public/PublicLayout.tsx
+ */
