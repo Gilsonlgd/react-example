@@ -40,6 +40,7 @@ module.exports = {
     'react/jsx-one-expression-per-line': 'off',
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'off',
+    'eslint-disable-next-line import/no-extraneous-dependencies': 'off',
     'react/require-default-props': [
       'error',
       {
@@ -47,7 +48,7 @@ module.exports = {
       },
     ],
     'no-console': ['warn', { allow: ['error'] }],
-    'no-void': ["error", { "allowAsStatement": true }],
+    'no-void': ['error', { allowAsStatement: true }],
     'react/jsx-filename-extension': [
       1,
       {
@@ -61,8 +62,8 @@ module.exports = {
         allowExpressions: true,
       },
     ],
-    "@typescript-eslint/no-unsafe-assignment": "off",
-    "@typescript-eslint/no-unsafe-argument": "off",
+    '@typescript-eslint/no-unsafe-assignment': 'off',
+    '@typescript-eslint/no-unsafe-argument': 'off',
     'import/extensions': [
       'error',
       'ignorePackages',
