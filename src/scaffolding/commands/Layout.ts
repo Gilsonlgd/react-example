@@ -7,34 +7,34 @@ import {
   includeRelated,
 } from 'angel-manager';
 
-export default class Components extends BaseCommand {
+export default class Layout extends BaseCommand {
   /**
    * Command name is used to run the command
    */
-  public commandName = 'make:public-view';
+  public commandName = 'make:layout';
 
   /**
    * Description of the command
    */
-  public description = 'Makes a new Public View';
+  public description = 'Makes a new Layout';
 
   /**
    * Liquid template path
    */
-  public templatePath = 'views/public';
+  public templatePath = 'layout';
 
   /**
    * Processed template destination path
    */
-  public destinationPath = 'views/public';
+  public destinationPath = 'layout';
 
   public file: FileConfig = {
     // The name of the generated file
-    name: { argName: 'viewName', case: 'pascal' },
+    name: { argName: 'layoutName', case: 'pascal' },
     // The extension of the generated file
     extension: 'tsx',
     // If true, the code will be generated inside a directory named after the file.
-    subDir: true,
+    subDir: false,
   };
 
   /**
@@ -43,7 +43,7 @@ export default class Components extends BaseCommand {
    * to be passed to the command in the order they are defined
    */
   public args(): Arg[] {
-    return [{ name: 'viewName', type: 'string' }];
+    return [{ name: 'layoutName', type: 'string' }];
   }
 
   public async run(args: RunnableArgs): Promise<void> {

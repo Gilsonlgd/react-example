@@ -7,26 +7,26 @@ import {
   includeRelated,
 } from 'angel-manager';
 
-export default class Components extends BaseCommand {
+export default class AdminViews extends BaseCommand {
   /**
    * Command name is used to run the command
    */
-  public commandName = 'make:public-view';
+  public commandName = 'make:admin-view';
 
   /**
    * Description of the command
    */
-  public description = 'Makes a new Public View';
+  public description = 'Makes a new Admin View';
 
   /**
    * Liquid template path
    */
-  public templatePath = 'views/public';
+  public templatePath = 'views/admin';
 
   /**
    * Processed template destination path
    */
-  public destinationPath = 'views/public';
+  public destinationPath = 'views/admin';
 
   public file: FileConfig = {
     // The name of the generated file

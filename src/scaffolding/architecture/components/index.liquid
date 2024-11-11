@@ -1,4 +1,4 @@
-import './{{ pascal.componentName }}.scoped.css';
+import './{{ pascal.componentName }}.css';
 
 interface {{ pascal.componentName }}Props {
   /* The props of the component */
@@ -18,3 +18,10 @@ function {{ pascal.componentName }}({
 }
 
 export default {{ pascal.componentName }};
+
+/**
+ * @note
+ * Insira a linha abaixo em src/components/index.ts:
+ * export { default as {{ pascal.componentName }} } from "./{{ pascal.componentName }}/{{ pascal.componentName }}"
+ */
+
