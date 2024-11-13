@@ -1,3 +1,4 @@
+import { Navigate } from 'react-router-dom';
 import { createBrowserRouter } from 'react-router-dom';
 
 import AdminLayout from '@layout/admin/AdminLayout';
@@ -9,8 +10,9 @@ import publicRoutes from './routes/public';
 const router = createBrowserRouter([
   {
     children: [
+      { path: '', element: <Navigate to="public/home" /> },
       {
-        path: '/',
+        path: '/public',
         element: <PublicLayout />,
         children: publicRoutes,
       },
