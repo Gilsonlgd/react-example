@@ -1,26 +1,22 @@
-import { Navigate } from 'react-router-dom';
-import { createBrowserRouter } from 'react-router-dom';
+import { Navigate, createBrowserRouter } from 'react-router-dom';
 
 import AdminLayout from '@layout/admin/AdminLayout';
-import PublicLayout from '@layout/public/PublicLayout';
+/* import WorkerLayout from '@layout/worker/WorkerLayout'; */
 
 import adminRoutes from './routes/admin';
-import publicRoutes from './routes/public';
+/* import workerRoutes from './routes/worker'; */
 
 const router = createBrowserRouter([
   {
     children: [
-      { path: '', element: <Navigate to="public/home" /> },
-      {
-        path: '/public',
-        element: <PublicLayout />,
-        children: publicRoutes,
-      },
+      /* Ignore esta linha */
+      { path: '', element: <Navigate to="admin/dashboard" /> },
       {
         path: '/admin',
         element: <AdminLayout />,
         children: adminRoutes,
       },
+      /* Adicione aqui o workerRoutes, seguindo o padrão utilizado para adminRoutes. */
     ],
   },
 ]);
